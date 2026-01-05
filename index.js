@@ -120,7 +120,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./netflix.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `🎬 _*NETFLIX ALL DEVICE*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `🎬 _*NETFLIX ALL DEVICE*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Sharing 1p1u*\n\n`;
                 const list1p1u = items.filter(x => x.kategori === '1p1u');
                 list1p1u.length > 0 ? list1p1u.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -141,7 +141,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./canva.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `🎨 _*CANVA*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `🎨 _*CANVA*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Member*\n\n`;
                 const listmember = items.filter(x => x.kategori === 'member');
                 listmember.length > 0 ? listmember.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -162,7 +162,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./capcut.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `✂️ _*CAPCUT*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `✂️ _*CAPCUT*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Sharing*\n\n`;
                 const listsharing = items.filter(x => x.kategori === 'sharing');
                 listsharing.length > 0 ? listsharing.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -180,7 +180,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./iqiyi.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `📺 _*IQIYI*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `📺 _*IQIYI*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Sharing*\n\n`;
                 const listsharing = items.filter(x => x.kategori === 'sharing');
                 listsharing.length > 0 ? listsharing.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -198,7 +198,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./loklok.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `📱 _*LOKLOK*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `📱 _*LOKLOK*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Basic*\n\n`;
                 const listbasic = items.filter(x => x.kategori === 'basic');
                 listbasic.length > 0 ? listbasic.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -216,7 +216,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./wetv.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `📽️ _*WETV*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `📽️ _*WETV*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Sharing*\n\n`;
                 const listsharing = items.filter(x => x.kategori === 'sharing');
                 listsharing.length > 0 ? listsharing.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -234,7 +234,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./spotify.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `🎧 _*SPOTIFY*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `🎧 _*SPOTIFY*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Famplan*\n\n`;
                 const listfamplan = items.filter(x => x.kategori === 'famplan');
                 listfamplan.length > 0 ? listfamplan.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -252,7 +252,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./youtube.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `▶️ _*YOUTUBE*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `▶️ _*YOUTUBE*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Famplan*\n\n`;
                 const listfamplan = items.filter(x => x.kategori === 'famplan');
                 listfamplan.length > 0 ? listfamplan.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -270,7 +270,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./disney.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `🧸 _*DISNEY*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `🧸 _*DISNEY*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*PriceList*\n\n`;
                 const listall = items.filter(x => x.kategori === 'all');
                 listall.length > 0 ? listall.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -285,7 +285,7 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./hbo.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `🎞  _*HBO*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
+                let pesan = `🎞  _*HBO*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*PriceList*\n\n`;
                 const listall = items.filter(x => x.kategori === 'all');
                 listall.length > 0 ? listall.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
@@ -300,11 +300,11 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./viu.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `📺 _*VIU*_\n\nNote: Tanyakan stok terlebih dahulu\n\n`;
-                pesan += `\n*Private Biasa*\n\n`;
+                let pesan = `📺 _*VIU*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
+                pesan += `*Private Biasa*\n\n`;
                 const listprivate = items.filter(x => x.kategori === 'privat');
                 listprivate.length > 0 ? listprivate.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
-                pesan += `*Private Anti Limit Fullgar*\n\n`;
+                pesan += `\n*Private Anti Limit Fullgar*\n\n`;
                 const listprivfull = items.filter(x => x.kategori === 'privat_fullgar');
                 listprivfull.length > 0 ? listprivfull.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
@@ -317,21 +317,21 @@ client.on('message_create', async msg => {
         if (isiPesan === '.pl') {
             let menu = `🧑‍🚀 _*PRICELIST APP PREMIUM*_\n\n`;
             menu += `🌌 *MOVIE & STREAMING*\n\n`;
-            menu += `🪐 Netflix Premium\n`;
-            menu += `🛸 Disney+ Hotstar\n`;
-            menu += `🔭 Loklok\n`;
-            menu += `🌠 HBO GO\n`;
-            menu += `☄️ Viu\n`;
-            menu += `🛰️ WeTV VIP\n`;
-            menu += `👾 Iqiyi\n\n`;
+            menu += `► Netflix\n`;
+            menu += `► Disney\n`;
+            menu += `► Loklok\n`;
+            menu += `► HBO\n`;
+            menu += `► Viu\n`;
+            menu += `► WeTV\n`;
+            menu += `► Iqiyi\n\n`;
             menu += `🎶 *MUSIC & YOUTUBE*\n\n`;
-            menu += `🎧 Spotify Premium\n`;
-            menu += `🚀 Youtube Premium\n\n`;
+            menu += `► Spotify\n`;
+            menu += `► Youtube\n\n`;
             menu += `🎨 *CREATIVE & EDITING*\n\n`;
-            menu += `🌑 Canva Pro\n`;
-            menu += `🎬 CapCut Pro\n\n`;
+            menu += `► Canva\n`;
+            menu += `► CapCut\n\n`;
             menu += `📡 *Note:*\n`;
-            menu += `Cara Mengakses Menu Harga Spesifik?\n`;
+            menu += `Ingin Mengakses Harga Menu Spesifik?\n`;
             menu += `Ketik format titik + nama aplikasi (huruf kecil).\n`;
 
             return await msg.reply(menu);

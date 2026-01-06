@@ -370,10 +370,10 @@ client.on('message_create', async msg => {
             menu += `► Alight Motion (AM)\n`;
             menu += `► CapCut\n\n`;
             menu += `*Note:*\n\n`;
-            menu += `*Pricelist 1*\n`;
-            menu += `https://whatsapp.com/channel/0029VbBvJaB42DcaMZywYo0p/102\n\n`;
             menu += `Ingin Mengakses Harga Menu Spesifik langsung?\n\n`;
-            menu += `> Ketik format titik + nama aplikasi (huruf kecil).\n`;
+            menu += `> Ketik format titik + nama aplikasi (huruf kecil).\n\n`;
+            menu += `*Pricelist 1*\n`;
+            menu += `https://whatsapp.com/channel/0029VbBvJaB42DcaMZywYo0p/102\n`;
 
             return await msg.reply(menu);
         }

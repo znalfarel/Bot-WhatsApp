@@ -115,7 +115,7 @@ client.on('message_create', async msg => {
 
         
         // --- PRICELIST NETFLIX ---
-        if (isiPesan.includes('.netflix')) {
+        if (isiPesan.includes('.felik')) {
             if (fs.existsSync('./netflix.json')) {
                 const rawData = fs.readFileSync('./netflix.json', 'utf8');
                 const items = JSON.parse(rawData);
@@ -123,13 +123,13 @@ client.on('message_create', async msg => {
                 let pesan = `🎬 _*NETFLIX ALL DEVICE*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Sharing 1p1u*\n\n`;
                 const list1p1u = items.filter(x => x.kategori === '1p1u');
-                list1p1u.length > 0 ? list1p1u.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                list1p1u.length > 0 ? list1p1u.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Semi Private*\n\n`;
                 const listsempriv = items.filter(x => x.kategori === 'semi_private');
-                listsempriv.length > 0 ? listsempriv.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listsempriv.length > 0 ? listsempriv.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Private*\n\n`;
                 const listprivate = items.filter(x => x.kategori === 'private');
-                listprivate.length > 0 ? listprivate.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listprivate.length > 0 ? listprivate.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -144,13 +144,13 @@ client.on('message_create', async msg => {
                 let pesan = `🎨 _*CANVA*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Member*\n\n`;
                 const listmember = items.filter(x => x.kategori === 'member');
-                listmember.length > 0 ? listmember.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listmember.length > 0 ? listmember.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Admin*\n\n`;
                 const listadmin = items.filter(x => x.kategori === 'admin');
-                listadmin.length > 0 ? listadmin.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listadmin.length > 0 ? listadmin.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Owner*\n\n`;
                 const listowner = items.filter(x => x.kategori === 'owner');
-                listowner.length > 0 ? listowner.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listowner.length > 0 ? listowner.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -165,10 +165,10 @@ client.on('message_create', async msg => {
                 let pesan = `✂️ _*CAPCUT*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Sharing*\n\n`;
                 const listsharing = items.filter(x => x.kategori === 'sharing');
-                listsharing.length > 0 ? listsharing.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listsharing.length > 0 ? listsharing.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Private*\n\n`;
                 const listprivate = items.filter(x => x.kategori === 'private');
-                listprivate.length > 0 ? listprivate.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listprivate.length > 0 ? listprivate.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -183,10 +183,10 @@ client.on('message_create', async msg => {
                 let pesan = `📺 _*IQIYI*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Sharing*\n\n`;
                 const listsharing = items.filter(x => x.kategori === 'sharing');
-                listsharing.length > 0 ? listsharing.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listsharing.length > 0 ? listsharing.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Private*\n\n`;
                 const listprivate = items.filter(x => x.kategori === 'private');
-                listprivate.length > 0 ? listprivate.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listprivate.length > 0 ? listprivate.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -201,10 +201,10 @@ client.on('message_create', async msg => {
                 let pesan = `📱 _*LOKLOK*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Basic*\n\n`;
                 const listbasic = items.filter(x => x.kategori === 'basic');
-                listbasic.length > 0 ? listbasic.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listbasic.length > 0 ? listbasic.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Standard*\n\n`;
                 const liststandard = items.filter(x => x.kategori === 'standard');
-                liststandard.length > 0 ? liststandard.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                liststandard.length > 0 ? liststandard.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -219,10 +219,10 @@ client.on('message_create', async msg => {
                 let pesan = `📽️ _*WETV*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Sharing*\n\n`;
                 const listsharing = items.filter(x => x.kategori === 'sharing');
-                listsharing.length > 0 ? listsharing.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listsharing.length > 0 ? listsharing.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Private*\n\n`;
                 const listprivate = items.filter(x => x.kategori === 'private');
-                listprivate.length > 0 ? listprivate.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listprivate.length > 0 ? listprivate.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -237,10 +237,10 @@ client.on('message_create', async msg => {
                 let pesan = `🎧 _*SPOTIFY*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Famplan*\n\n`;
                 const listfamplan = items.filter(x => x.kategori === 'famplan');
-                listfamplan.length > 0 ? listfamplan.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listfamplan.length > 0 ? listfamplan.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Indplan*\n\n`;
                 const listindplan = items.filter(x => x.kategori === 'indplan');
-                listindplan.length > 0 ? listindplan.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listindplan.length > 0 ? listindplan.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -255,10 +255,13 @@ client.on('message_create', async msg => {
                 let pesan = `▶️ _*YOUTUBE*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
                 pesan += `*Famplan*\n\n`;
                 const listfamplan = items.filter(x => x.kategori === 'famplan');
-                listfamplan.length > 0 ? listfamplan.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listfamplan.length > 0 ? listfamplan.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 pesan += `\n*Indplan*\n\n`;
                 const listindplan = items.filter(x => x.kategori === 'indplan');
-                listindplan.length > 0 ? listindplan.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listindplan.length > 0 ? listindplan.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                pesan += `\n*Head*\n\n`;
+                const listhead = items.filter(x => x.kategori === 'head');
+                listhead.length > 0 ? listhead.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -271,10 +274,13 @@ client.on('message_create', async msg => {
                 const items = JSON.parse(rawData);
 
                 let pesan = `🧸 _*DISNEY*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
-                pesan += `*PriceList*\n\n`;
-                const listall = items.filter(x => x.kategori === 'all');
-                listall.length > 0 ? listall.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
-
+                pesan += `1 User\n\n`;
+                const listuser = items.filter(x => x.kategori === 'oneuser');
+                listuser.length > 0 ? listuser.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                
+                pesan += `\nSharing Plan\n\n`;
+                const listshare = items.filter(x => x.kategori === 'sharing');
+                listshare.length > 0 ? listshare.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
                 return await msg.reply(pesan);
             }
         }
@@ -285,10 +291,13 @@ client.on('message_create', async msg => {
                 const rawData = fs.readFileSync('./hbo.json', 'utf8');
                 const items = JSON.parse(rawData);
 
-                let pesan = `🎞  _*HBO*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
-                pesan += `*PriceList*\n\n`;
-                const listall = items.filter(x => x.kategori === 'all');
-                listall.length > 0 ? listall.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                let pesan = `🎞 _*HBO*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
+                
+                pesan += `*Sharing*\n`;
+                const listshare = items.filter(x => x.kategori === 'sharing');
+                listshare.length > 0 
+                    ? listshare.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info || ''}\n`) 
+                    : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -301,12 +310,41 @@ client.on('message_create', async msg => {
                 const items = JSON.parse(rawData);
 
                 let pesan = `📺 _*VIU*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
-                pesan += `*Private Biasa*\n\n`;
+            
+                pesan += `*Private Biasa*\n`;
                 const listprivate = items.filter(x => x.kategori === 'privat');
-                listprivate.length > 0 ? listprivate.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
-                pesan += `\n*Private Anti Limit Fullgar*\n\n`;
+                listprivate.length > 0 
+                    ? listprivate.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) 
+                    : pesan += "_(Stok Kosong)_\n";
+               
+                pesan += `\n*Private Anti Limit Fullgar*\n`;
                 const listprivfull = items.filter(x => x.kategori === 'privat_fullgar');
-                listprivfull.length > 0 ? listprivfull.forEach(i => pesan += `${i.durasi} = ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                listprivfull.length > 0 
+                    ? listprivfull.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) 
+                    : pesan += "_(Stok Kosong)_\n";
+
+                pesan += `\nNote:\n`;
+                pesan += `> viu private = bisa limit screen tapi jarang\n`;
+                pesan += `> viu antilimit = tidak ada limit screen\n`;
+                pesan += `> all device/all provider`;
+
+                return await msg.reply(pesan);
+            }
+        }
+
+        // --- PRICELIST AlightMotion---
+        if (isiPesan.includes('.am')) {
+            if (fs.existsSync('./am.json')) {
+                const rawData = fs.readFileSync('./am.json', 'utf8');
+                const items = JSON.parse(rawData);
+
+                let pesan = `📽️ _*ALIGHT MOTION*_\n\n_Note: Tanyakan stok terlebih dahulu_\n\n`;
+                pesan += `*Sharing*\n\n`;
+                const listsharing = items.filter(x => x.kategori === 'sharing');
+                listsharing.length > 0 ? listsharing.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
+                pesan += `\n*Private*\n\n`;
+                const listprivate = items.filter(x => x.kategori === 'private');
+                listprivate.length > 0 ? listprivate.forEach(i => pesan += `✧ ${i.durasi} 𓃊 ${i.harga} ${i.info}\n`) : pesan += "_(Stok Kosong)_\n";
 
                 return await msg.reply(pesan);
             }
@@ -315,24 +353,27 @@ client.on('message_create', async msg => {
         
         // --- MENU UTAMA (.pl) ---
         if (isiPesan === '.pl') {
-            let menu = `🧑‍🚀 _*PRICELIST APP PREMIUM*_\n\n`;
-            menu += `🌌 *MOVIE & STREAMING*\n\n`;
-            menu += `► Netflix\n`;
+            let menu = `⌬ _*PRICELIST APP PREMIUM* ⌬_\n\n`;
+            menu += `*MOVIE & STREAMING*\n\n`;
+            menu += `► ~Netflix~\n`;
             menu += `► Disney\n`;
             menu += `► Loklok\n`;
             menu += `► HBO\n`;
             menu += `► Viu\n`;
             menu += `► WeTV\n`;
             menu += `► Iqiyi\n\n`;
-            menu += `🎶 *MUSIC & YOUTUBE*\n\n`;
+            menu += `*MUSIC & YOUTUBE*\n\n`;
             menu += `► Spotify\n`;
             menu += `► Youtube\n\n`;
-            menu += `🎨 *CREATIVE & EDITING*\n\n`;
+            menu += `*CREATIVE & EDITING*\n\n`;
             menu += `► Canva\n`;
+            menu += `► Alight Motion (AM)\n`;
             menu += `► CapCut\n\n`;
-            menu += `📡 *Note:*\n`;
-            menu += `Ingin Mengakses Harga Menu Spesifik?\n`;
-            menu += `Ketik format titik + nama aplikasi (huruf kecil).\n`;
+            menu += `*Note:*\n\n`;
+            menu += `*Pricelist 1*\n`;
+            menu += `https://whatsapp.com/channel/0029VbBvJaB42DcaMZywYo0p/102\n\n`;
+            menu += `Ingin Mengakses Harga Menu Spesifik langsung?\n\n`;
+            menu += `> Ketik format titik + nama aplikasi (huruf kecil).\n`;
 
             return await msg.reply(menu);
         }
